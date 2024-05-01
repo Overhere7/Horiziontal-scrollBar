@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 export default function App() {
         let arr = [];
-      for (let i=1 ; i<=10; i++){
+      for (let i=1 ; i<=35; i++){
         arr.push(i);
       } 
       const handleRight = ()=>{
