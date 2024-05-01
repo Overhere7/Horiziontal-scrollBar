@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+export default function App() {
+        let arr = [];
+      for (let i=1 ; i<=10; i++){
+        arr.push(i);
+      } 
+      const handleRight = ()=>{
+        document.getElementById("display").scrollLeft+=208.5
 
-function App() {
+      }
+      const handleLeft = ()=>{
+        document.getElementById("display").scrollLeft-=208.5
+      }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='DisplayBar' id='display'>
+      {arr.map((ele) => <div ><div className='numbers'>{ele}</div></div>)}
     </div>
-  );
+    <button class='leftbtn' onClick={handleLeft}>Left</button>
+    <button class='rightbtn' onClick={handleRight}>Right</button>
+    </>
+  )
 }
-
-export default App;
